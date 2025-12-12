@@ -1,0 +1,27 @@
+<footer class="bg-gray-900 text-gray-300 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="flex flex-col md:flex-row justify-between items-center">
+
+      <!-- Left Side -->
+      <div class="text-center md:text-left mb-4 md:mb-0">
+        <h2 class="text-xl font-semibold">Crud app</h2>
+        <p class="text-sm text-gray-400">Building footer on rails</p>
+      </div>
+
+      <!-- Right Side (Links) -->
+      <div class="flex space-x-6 text-sm">
+        <%= link_to "Home", root_path, class: "hover:text-white" %>
+        <%= link_to "About", home_about_path, class: "hover:text-white" %>
+        <%= link_to "Contact", home_contact_path, class: "hover:text-white" %>
+      </div>
+
+    </div>
+
+    <!-- Bottom Line -->
+    <div class="border-t border-gray-700 mt-6 pt-4 text-center text-sm text-gray-500">
+      © <%= Time.current.year %> MyApp. All rights reserved.
+    </div>
+
+  </div>
+</footer>

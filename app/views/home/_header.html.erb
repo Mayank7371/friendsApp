@@ -1,0 +1,42 @@
+<nav class="bg-gray-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <div class="text-2xl font-bold">
+        MyApp
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6">
+        <%= link_to "Home", root_path, class: "hover:text-gray-300" %>
+        <%= link_to "About", home_about_path, class: "hover:text-gray-300" %>
+        <%= link_to "Contact", home_contact_path, class: "hover:text-gray-300" %>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-gray-800 space-y-2">
+    <%= link_to "Home", root_path, class: "block hover:text-gray-300" %>
+    <%= link_to "About", "#", class: "block hover:text-gray-300" %>
+    <%= link_to "Contact", "#", class: "block hover:text-gray-300" %>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+    btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+  });
+</script>

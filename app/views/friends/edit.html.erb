@@ -1,0 +1,39 @@
+<h1 class="text-3xl font-bold mb-6">New Friend</h1>
+
+<div class="max-w-lg mx-auto bg-white shadow-md rounded-lg p-6">
+  <%= form_with(model: @friend, local: true) do |form| %>
+
+    <div class="mb-4">
+      <%= form.label :first_name, class: "block font-medium mb-1" %>
+      <%= form.text_field :first_name, class: "w-full border border-gray-300 rounded-lg px-3 py-2" %>
+    </div>
+
+    <div class="mb-4">
+      <%= form.label :last_name, class: "block font-medium mb-1" %>
+      <%= form.text_field :last_name, class: "w-full border border-gray-300 rounded-lg px-3 py-2" %>
+    </div>
+
+    <div class="mb-4">
+      <%= form.label :email, class: "block font-medium mb-1" %>
+      <%= form.text_field :email, class: "w-full border border-gray-300 rounded-lg px-3 py-2" %>
+    </div>
+
+    <div class="mb-4">
+      <%= form.label :phone, class: "block font-medium mb-1" %>
+      <%= form.text_field :phone, class: "w-full border border-gray-300 rounded-lg px-3 py-2" %>
+    </div>
+
+    <div class="mb-4">
+      <%= form.label :twitter, class: "block font-medium mb-1" %>
+      <%= form.text_field :twitter, class: "w-full border border-gray-300 rounded-lg px-3 py-2" %>
+    </div>
+
+    <div class="mt-6 flex justify-between items-center">
+      <%= link_to "Back to friends", friends_path, class: "text-blue-600 hover:underline" %>
+
+      <%= form.submit "Create Friend",
+            class: "bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2 rounded-lg" %>
+    </div>
+
+  <% end %>
+</div>

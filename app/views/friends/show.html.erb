@@ -1,0 +1,23 @@
+<div class="container mx-auto py-12 px-4 max-w-5xl">
+  <h1 class="text-3xl font-bold mb-8 text-center">Friend Details</h1>
+
+  <div class="bg-white shadow-lg rounded-lg p-8 border border-gray-200">
+    <%= render @friend %>
+  </div>
+
+  <div class="mt-6 flex flex-wrap justify-center gap-4">
+    <%= link_to "Edit Friend", 
+          edit_friend_path(@friend), 
+          class: "px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium" %>
+
+    <%= link_to "Back to Friends", 
+          friends_path, 
+          class: "px-5 py-2.5 bg-gray-200 hover:bg-gray-300 rounded-lg font-medium" %>
+
+    <%= button_to "Delete Friend", 
+          @friend, 
+          method: :delete,
+          class: "px-5 py-2.5 bg-red-600 hover:bg-red-500 text-white rounded-lg font-medium",
+          data: { turbo_confirm: "Are you sure?" } %>
+  </div>
+</div>
