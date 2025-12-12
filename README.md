@@ -34,7 +34,7 @@ This app allows users to manage a list of friends with fields like first name, l
 ### 1. Clone the Repository
 
 ```sh
-git clone https://github.com/yourusername/crud-app.git
+git clone git@github.com:Mayank7371/friendsApp.git
 cd crud-app
 bundle install
 rails db:create
