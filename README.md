@@ -35,7 +35,7 @@ This app allows users to manage a list of friends with fields like first name, l
 
 ```sh
 git clone git@github.com:Mayank7371/friendsApp.git
-cd crud-app
+cd friendsApp
 bundle install
 rails db:create
 rails db:migrate
